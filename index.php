@@ -1,5 +1,9 @@
 <?php
 
+$siteSettings = array(
+    'assets_path' => '/assets',
+);
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 $loader = new Twig_Loader_Filesystem(__DIR__ . '/templates');
@@ -16,7 +20,7 @@ if (empty($request)) {
 $template = $request . '.twig';
 
 try {
-    echo $twig->render($template);
+    echo $twig->render($template, $siteSettings);
 } catch (Twig_Error_Loader $e) {
     return false;
 }
