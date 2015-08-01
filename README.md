@@ -6,7 +6,7 @@ This is a skeleton repository which helps to quickly start a new static frontend
 Suggested Usage
 ---------------
 
-Fork this repository or download it throught GitHub. Then, use [Composer](https://getcomposer.org/) to install required dependencies:
+Fork this repository or download it through GitHub. Then, use [Composer](https://getcomposer.org/) to install required dependencies:
 
 	$ composer install
 	
