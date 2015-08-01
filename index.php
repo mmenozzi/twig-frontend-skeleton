@@ -2,6 +2,10 @@
 
 $siteSettings = array(
     'assets_path' => '/assets',
+    'pages' => array(
+        '/' => 'Home',
+        '/about-us.html' => 'About Us',
+    ),
 );
 
 require_once __DIR__ . '/vendor/autoload.php';

@@ -1,5 +1,10 @@
 {% extends '_layout/base.html.twig' %}
 
+{% block navbar %}
+    {% set current_page = '/' %}
+    {{ parent() }}
+{% endblock navbar %}
+
 {% block content %}
 
     <div class="jumbotron">
