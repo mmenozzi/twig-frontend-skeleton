@@ -21,7 +21,7 @@ Internals
 
 Starting the PHP builtin webserver as shown above, every request will be routed to the `index.php` file which acts as a front controller and router.
 
-The router tries to detect requests to assets files and serves that normally:
+The router tries to detect requests to assets files and serves them normally:
 
 	$request = ltrim($_SERVER["REQUEST_URI"], '/');
 	if (preg_match('/\.(?:png|jpg|jpeg|gif|ico|css|js|ttf|otf|woff)$/', $request)) {
