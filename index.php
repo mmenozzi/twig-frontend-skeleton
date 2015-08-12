@@ -17,8 +17,12 @@ if (empty($request)) {
 }
 
 require_once __DIR__ . '/vendor/autoload.php';
-$template = $request . '.twig';
-$loader = new Twig_Loader_Filesystem(__DIR__ . '/templates');
+
+$namespace = 'static';
+$template = '@' . $namespace . DIRECTORY_SEPARATOR . $request . '.twig';
+
+$loader = new Twig_Loader_Filesystem();
+$loader->addPath(__DIR__ . '/templates', $namespace);
 $twig = new Twig_Environment($loader);
 
 try {
